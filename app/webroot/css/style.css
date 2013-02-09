@@ -1,0 +1,109 @@
+.center{
+        text-align: center;
+}
+
+.change-themes-list .active{
+        font-weight: bold;
+}
+
+.strong{
+        font-weight: bold;
+}
+
+/* Modal outline fix */
+*:focus,
+a:focus{
+        outline: none;
+}
+
+.threadList li{
+        list-style: none;
+        margin:0;
+        margin:4px;
+        border:1px solid #ddd;
+        font-weight:200;
+        box-shadow: 1px 1px 1px #eeeeff;
+}
+.threadList{
+        margin:0;
+        padding:0;
+}
+.threadList .threadBody{
+        padding:5px;
+}
+.threadList .threadName{
+        font-size:18px;
+        font-weight:200;
+
+}
+.threadList .threadName em{
+        font-size:12px;
+        font-weight:200;
+        color:#ccc;
+        display:block;
+}
+
+
+.threadList .threadLink{
+        font-size:90%;
+        background:#eee;
+}
+
+
+.threadList .threadLink a{
+        display:block;
+        text-align: right;
+        background:#eee;
+        padding:2px;
+}
+
+.leadArticle a{
+        font-weight:500;
+}
+
+.welcome{
+        font-weight:200;
+        font-size:1.1em;
+        line-height:20px;
+}
+.welcome h1{
+        margin-bottom:10;font-size:30px;line-height:1.2;color:inherit;letter-spacing:-1px;
+}
+#subscribeEmail{
+        margin-top:9px;
+}
+
+
+#gplusActivities ul{
+        margin:0;
+        padding:0;
+}
+
+#gplusActivities ul li{
+        margin:0;
+        margin-bottom:8px;
+        font-size:90%;
+        list-style:none;
+        border-bottom:1px solid #eee;
+}
+#gplusActivities ul li span{
+        color:#ccc;
+        font-style: italic;
+        display:block;
+        font-size:90%;
+}
+
+.bordered{
+        border:1px solid #ccc;
+        padding:8px;
+}
+
+.topPlusOne{
+        padding-top:7px;
+}
+.red{
+        color:red;
+}
+.maroon{
+        color:maroon;
+}
