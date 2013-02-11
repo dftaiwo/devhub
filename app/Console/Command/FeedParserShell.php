@@ -16,6 +16,7 @@ class FeedParserShell extends AppShell {
         function pullFeeds() {
 
                 $feedInfo = $this->Feed->getActiveFeeds();
+                shuffle($feedInfo);
                 $this->out("Feeds Found: ".count($feedInfo));
                 $freshArticles  = array();
 //                $this->Article->query("Truncate articles");
@@ -37,9 +38,9 @@ class FeedParserShell extends AppShell {
                 $email->helpers(array('Html','Text'));
                 $email->template('require_approval', 'default')
                 ->emailFormat('html')
-                ->from('tasks@gdglagos.com')
-                ->subject("New Articles - Approval Required @ $now")
-                ->to('dftaiwo@gmail.com')
+                ->from(array('hub@dev.org.ng'=>'DevHub'))
+                ->subject("DevHub Articles - Approval Required @ $now")
+                ->to('dev@dev.org.ng')
                 ->send();
                 
         }
@@ -54,15 +55,23 @@ class FeedParserShell extends AppShell {
                 try {
                          $this->out("Pulling from $feedUrl");
                          
-                         
+                      $feedUrl  =trim($feedUrl);
+                      
                         $content = @file_get_contents($feedUrl);
+                        
 //                             $hash = md5($feedUrl);
 //                        file_put_contents(TMP."/{$hash}.xml",$content);
 //                             $content = file_get_contents(TMP."/{$hash}.xml");
-
-                        $rss = simplexml_load_string($content);
+                        $rss = false;
+                        try{
+                               // $content =  preg_replace('#&(?=[a-z_0-9]+=)#', '&amp;', $content);
+                               $content =  preg_replace('/&[^; ]{0,6}.?/e', "((substr('\\0',-1) == ';') ? '\\0' : '&amp;'.substr('\\0',1))", $content);
+                                $rss = simplexml_load_string($content);
+                        }catch(Exception $e){
+                                $this->out($e->getMessage().' parserError, trying regexp');
+                        }
                         if (!$rss) {
-                                $this->out("Parser Error");
+                                $this->out("Nothing in Feed");
                                 return;
                         }
                          $sortOrder=0;

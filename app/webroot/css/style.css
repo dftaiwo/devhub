@@ -1,3 +1,6 @@
+body{
+        font-weight: 200;
+}
 .center{
         text-align: center;
 }
@@ -98,6 +101,10 @@ a:focus{
         padding:8px;
 }
 
+.shadowed{
+        box-shadow: 1px 1px 2px #eee;
+}
+
 .topPlusOne{
         padding-top:7px;
 }
@@ -106,4 +113,13 @@ a:focus{
 }
 .maroon{
         color:maroon;
+}
+
+footer{
+        text-align: right;
+        font-weight:200;
+}
+.index{
+        color:#555;
+        
 }

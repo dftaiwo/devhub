@@ -2,6 +2,12 @@
 * This is your App script template. Is already working, all you need to do it build your functions and play :)
 * Here you can already use Jquery, Modernizr and Bootstrap.js
 */
+
+$('td.actions a').each(function (index){
+        $(this).addClass('btn btn-mini');
+})
+  
+
 ;(function() {
   var App,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
@@ -24,3 +30,4 @@
   });
 
 }).call(this);
+

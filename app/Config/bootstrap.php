@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Africa/Lagos');
 /**
  * This file is loaded automatically by the app/webroot/index.php file after core.php
  *
@@ -144,14 +144,14 @@ Cache::config('default', array('engine' => 'File'));
  * Your application configuration starts here
  */
 
-$baseUrl= isset($_SERVER['HTTP_HOST'])? $_SERVER['HTTP_HOST']:'hub.gdglagos.com';
+$baseUrl= isset($_SERVER['HTTP_HOST'])? $_SERVER['HTTP_HOST']:'b.dev.org.ng';
 Configure::write(
         'Application', array(
-    'name' => 'GDG Lagos Hub',
-    'from_email' => 'hub@gdglagos.com',
-    'contact_mail' => 'hub@gdglagos.com',
+    'name' => '&#8747; dev',
+    'from_email' => 'hub@dev.org.ng',
+    'contact_mail' => 'hub@dev.org.ng',
             'base_url'=>"http://".$baseUrl,
-            'gplus_page_id'=>'112227844855698647164'
+            'gplus_page_id'=>'110948561122012597303'
         )
 );
 

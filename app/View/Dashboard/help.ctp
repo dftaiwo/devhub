@@ -10,13 +10,9 @@
 <div class="hero-unit">
 <h1>
         Want to Help?
-        
 </h1>
         <p>&nbsp;</p>
-
-                
-
         <p>
-                If you think you could contribute code or icons or a great design  to this project, Simply shoot me an email - dftaiwo@gmail.com!
+                If you think you could contribute code or icons or a great design  to this project, Simply shoot  an email to - dev@dev.org.ng!
         </p>
 </div>
